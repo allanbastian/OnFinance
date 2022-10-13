@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: CColors.scaffoldColor,
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
-          canvasColor: CColors.navColor,
+          canvasColor: CColors.bottomNavColor,
           textTheme: Theme.of(context)
               .textTheme
               .copyWith(caption: new TextStyle(color: CColors.navPurple)),
@@ -113,12 +113,12 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(width: Sizes.s10),
                     const FlatComponent(
                       buttonColor: Colors.transparent,
-                      svgString: 'assets/images/nifty2.svg',
+                      svgString: 'assets/images/tata.svg',
                       componentString: SStrings.nifty,
                     ),
                   ],
                 ),
-                SizedBox(height: Sizes.s30),
+                SizedBox(height: Sizes.s15),
                 Padding(
                   padding: EdgeInsets.all(Sizes.s15),
                   child: RichText(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: Sizes.s25),
+                SizedBox(height: Sizes.s10),
                 const MainRowWidget(
                   iconData: 'assets/images/stock.png',
                   iconColor: CColors.buttonYellow,
@@ -224,11 +224,11 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      // fixedColor: CColors.navColor,
-      // backgroundColor: CColors.navColor,
       showUnselectedLabels: true,
-      selectedLabelStyle: const TextStyle(color: CColors.purple),
-      unselectedLabelStyle: const TextStyle(color: CColors.navGray),
+      // type: BottomNavigationBarType.fixed,
+      //TODO See if label color can be changed accordingly
+      unselectedIconTheme: IconThemeData(color: CColors.navGray),
+      selectedIconTheme: IconThemeData(color: CColors.purple),
       items: [
         BottomNavigationBarItem(
           icon: Icon(
@@ -244,17 +244,18 @@ class NavBar extends StatelessWidget {
           label: 'Home',
         ),
         BottomNavigationBarItem(
-            icon: Icon(
-              Icons.explore_outlined,
-              color: CColors.navGray,
-              size: Sizes.s24,
-            ),
-            activeIcon: Icon(
-              Icons.explore_outlined,
-              color: CColors.navPurple,
-              size: Sizes.s24,
-            ),
-            label: 'Explore'),
+          icon: Icon(
+            Icons.explore_outlined,
+            color: CColors.navGray,
+            size: Sizes.s24,
+          ),
+          activeIcon: Icon(
+            Icons.explore_outlined,
+            color: CColors.navPurple,
+            size: Sizes.s24,
+          ),
+          label: 'Explore',
+        ),
         BottomNavigationBarItem(
           icon: Icon(
             Icons.notifications_none,

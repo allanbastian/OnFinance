@@ -43,4 +43,5 @@ class CColors {
   static const navPurple = Color(0xff7E4AFF);
   static const navGray = Color(0xff707070);
   static const navColor = Color(0xff6A31FF);
+  static const bottomNavColor = Color(0xff1F1C3F);
 }
