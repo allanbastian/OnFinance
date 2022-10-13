@@ -40,4 +40,7 @@ class CColors {
   static const buttonYellow = Color(0xffFFDA6D);
   static const buttonRed = Color(0xffFF6766);
   static const buttonPink = Color(0xffE9BED1);
+  static const navPurple = Color(0xff7E4AFF);
+  static const navGray = Color(0xff707070);
+  static const navColor = Color(0xff6A31FF);
 }
